@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo2.png'
+import logo from '../../assets/Logo01.png'
 import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
@@ -21,7 +21,7 @@ const Navbar = () => {
         <li><Link to='about' smooth={true} offset={-150} duration={500}>About us</Link></li>
         <li><Link to='blog' smooth={true} offset={-260} duration={500}>Blog</Link></li>
         <li><Link to='testinomials' smooth={true} offset={-260} duration={500}>Testimonials</Link></li>
-        <li><Link to='contact' smooth={true} offset={-260} duration={500}className='btn'>Contact us</Link></li>
+        <li><Link to='contact' smooth={true} offset={-260} duration={500}className='btn1'>Contact us</Link></li>
 
       </ul>
     </nav>
