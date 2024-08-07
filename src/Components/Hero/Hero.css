@@ -1,111 +1,102 @@
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    background: white ; 
-    background-size: cover;
-    background-position: left;
-    color: black;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+  width: 100%;
+  min-height: 100vh;
+  background: white; 
+  background-size: cover;
+  background-position: left;
+  color: black;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
 
-.hero-text{
-    text-align: center;
-    max-width: 800px;
-
-}
-.hero-text h1{
-    font-size: 60px;
-    font-weight: 600;
+.hero-text {
+  text-align: center;
+  max-width: 800px;
 }
 
-.hero-text p{
-    max-width: 700px;
-    margin: 10px auto 20px;
-    line-height: 1.6;
+.hero-text h1 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.hero-text p {
+  max-width: 700px;
+  margin: 10px auto 20px;
+  line-height: 1.6;
 }
 
 .hero .video-container {
-    position: relative;
-    margin-top: 50px;
-    
-  }
-  
-  .custom-controls {
-    position: absolute;
-    bottom: 80px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .custom-controls button {
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .custom-controls button:hover {
-    background: rgba(0, 0, 0, 0.7);
-  }
-  
-  .btn1{
-    background: #212EA0;
-    color: white;
-    padding: 14px 25px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
-    border: 0;
-    outline: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
- 
-  
-  .btn1 img{
-   width: 20px;
-   margin-left: 10px;
-   color: white;
-   
-  }
+  position: relative;
+  margin-top: 50px;
+}
 
- .slider {
+.custom-controls {
+  position: absolute;
+  bottom: 80px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.custom-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-controls button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.btn1 {
+  background: #212EA0;
+  color: white;
+  padding: 14px 25px;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1 img {
+  width: 20px;
+  margin-left: 10px;
+  color: white;
+}
+
+.slider1 {
   overflow: hidden;
   width: 100%;
   position: relative;
 }
 
-.slider ul {
+.slider1 ul {
   display: flex;
   padding: 0;
   margin: 0;
   list-style: none;
-  animation: slide 15s infinite linear;
+  transition: transform 0.5s ease-in-out;
 }
 
-.slider li {
+.slider1 li {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100px; /* Fixed width for each slide */
-  
+  min-width: 100%; /* Each slide should take full width */
 }
 
-.user-info img {
-  width: 120px; /* Fixed width */
+.user-info1 img {
+  width: 120px;
   margin: 10px 0;
-  object-fit: contain; /* Ensure the entire image is visible */
-  border-radius: 5px; /* Optional: add rounded corners */
-}
-
-@keyframes slide {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-100%*1)); } /* Adjust calculation based on the total number of slides */
+  object-fit: contain;
+  border-radius: 5px;
 }
