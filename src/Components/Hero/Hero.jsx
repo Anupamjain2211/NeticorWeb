@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Hero.css";
-import dark_arrow from "../../assets/dark-arrow.png";
+import dark_arrow from "../../assets/white-arrow.png";
 import hero from "../../assets/Hero01.mp4";
 import next_icon from "../../assets/next-icon.png";
 import back_icon from "../../assets/back-icon.png";
