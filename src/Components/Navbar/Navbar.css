@@ -1,6 +1,6 @@
-nav{
+/* Base Styles */
+.navbar {
     width: 100%;
-    /* background: #333; */
     color: #212EA0;
     padding: 4px 0;
     position: fixed;
@@ -10,35 +10,37 @@ nav{
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-}
-
-.logo{
+    background: transparent;
+    transition: background 0.3s;
+  }
+  
+  .logo {
     width: 150px;
     height: 90px;
     margin-top: 10px;
     margin-left: 10px;
-}
-
-nav ul li{
-    display: inline-block;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
     list-style: none;
+  }
+  
+  .nav-links li {
     margin: 5px 20px;
     font-size: 18px;
-
-}
-
-.dark-nav{
+  }
+  
+  .dark-nav {
     background: white;
-    transition: 0.5s;
-}
-
-
-
-.btn1{
+  }
+  
+  .btn1 {
     background: #212EA0;
     color: white;
     padding: 14px 25px;
-    font-size: 16px;
+    font-size: 20px;
     border-radius: 30px;
     cursor: pointer;
     border: 0;
@@ -47,3 +49,41 @@ nav ul li{
     align-items: center;
     justify-content: center;
   }
+  
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      background: white;
+      width: 100%;
+      height: calc(100vh - 60px);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .nav-links.open {
+      transform: translateX(0);
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+      font-size: 24px;
+    }
+  
+    .menu-icon {
+      display: block;
+    }
+  }
+  

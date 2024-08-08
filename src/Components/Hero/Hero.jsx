@@ -61,9 +61,11 @@ const Hero = () => {
             seamless, efficient, and impactful marketing solutions. Here’s what
             sets us apart:
           </p>
-          <button className="btn1">
-            Explore More <img src={dark_arrow} alt="" />
-          </button>
+          <div className="button-container">
+  <button className="btn1">
+    Explore More <img src={dark_arrow} alt="" />
+  </button>
+</div>
         </div>
         <div className="video-container">
           <video
@@ -111,14 +113,7 @@ const Hero = () => {
             </div>
           </li>
         </ul>
-        <div className="custom-controls">
-          <button onClick={slideBackward}>
-            <img src={back_icon} alt="Back" />
-          </button>
-          <button onClick={slideForward}>
-            <img src={next_icon} alt="Next" />
-          </button>
-        </div>
+        
       </div>
     </>
   );

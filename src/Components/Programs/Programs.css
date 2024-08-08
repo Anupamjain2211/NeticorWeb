@@ -1,23 +1,26 @@
-.programs{
+.programs {
     margin: 80px auto;
     width: 90%;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping of program items */
     align-items: center;
     justify-content: space-between;
-
 }
-.program img{
+
+.program {
+    flex: 1 1 calc(33.333% - 20px); /* Three items per row with spacing */
+    margin: 10px; /* Margin for spacing */
+    position: relative;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.program img {
     width: 100%;
     border-radius: 10px;
     display: block;
 }
 
-.program{
-    flex-basis: 31%;
-    position: relative;
-
-}
-.caption{
+.caption {
     border-radius: 10px;
     position: absolute;
     top: 0;
@@ -32,17 +35,29 @@
     color: white;
     cursor: pointer;
     opacity: 0;
-    padding-top: 70%;
-    transition: 0.4s;
-
+    padding: 10px; /* Adjust padding */
+    transition: opacity 0.4s, padding 0.4s;
 }
 
-.caption img{
+.caption img {
     width: 60px;
     margin-bottom: 10px;
-
 }
-.program:hover .caption{
+
+.program:hover .caption {
     opacity: 1;
     padding-top: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .program {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .program {
+        flex: 1 1 100%; /* One item per row on mobile */
+    }
 }

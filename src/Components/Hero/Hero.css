@@ -1,35 +1,56 @@
+/* Ensure the navbar has a higher z-index and position it correctly */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 100px; /* Adjust this value to match your navbar height */
+}
+
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: white; 
-  background-size: cover;
-  background-position: left;
+  background: white;
   color: black;
-  background-repeat: no-repeat;
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
+  padding-top: 80px; /* Adjust this value to match your navbar height */
 }
 
 .hero-text {
   text-align: center;
   max-width: 800px;
+  margin: 20px;
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 600;
+  text-align: center;
+
+
 }
 
 .hero-text p {
   max-width: 700px;
+  text-align: center;
+  overflow-wrap: break-word;
   margin: 10px auto 20px;
   line-height: 1.6;
 }
 
 .hero .video-container {
   position: relative;
-  margin-top: 50px;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.gallery-video {
+  width: 100%;
+  height: auto;
 }
 
 .custom-controls {
@@ -53,6 +74,11 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  width: 100%; /* Ensure the container takes the full width if needed */
+}
 .btn1 {
   background: #212EA0;
   color: white;
@@ -62,7 +88,7 @@
   cursor: pointer;
   border: 0;
   outline: 0;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -91,12 +117,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%; /* Each slide should take full width */
+  min-width: 100%;
 }
 
 .user-info1 img {
-  width: 120px;
+  width: 100px;
   margin: 10px 0;
   object-fit: contain;
   border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 60px;
+  }
+
+  .custom-controls {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-video {
+    width: 700px;
+    height: 600px;
+  }
+
+  .custom-controls {
+    bottom: 20px;
+  }
 }
